@@ -49,3 +49,16 @@ console.log(typeof myFunction);
 // undefined => typeof undefined aata h
 // array and objects ka typeof object aata h
 // function ka typeof function aata h 
+
+
+// **********************************************************************************
+
+//  Stack ->primitive, Heap-> Non- primitive
+
+
+let yt= "hit"
+let ant= yt
+console.log(yt)
+//  primitive m copy pass  hoti h so change krne pr change phle variable m reflect nhi hota
+// non primitive m reference pass hota h to doosre variable m change krne pr phle variable m change reflect hota h 
+
