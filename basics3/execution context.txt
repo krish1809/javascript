@@ -1,0 +1,124 @@
+{} 
+globak execution context 
+function execution context
+eval execution context
+
+2 phases
+memory creation phase(creation phase) variables assign
+execution phase  add sub 
+
+1. global execution 
+2. mcp - variable ki ikhhata kr ke rkha jaata , vairable ke andr undefined rkha jaata h, 
+    val1->undefiend,val2->undefied, addnum->defination
+    result1-> undefined
+    result2->undefined
+3.val1=10,val2=5
+    addnum ka ekaur executional context 
+    3.1 mcp 
+        val1-undefined
+        val2-undefined
+        total-undefined
+    3.2 execution
+        num1-10,num2-5
+        total-15
+
+    then gets deleted thi ec             
+
+
+***************************call stack*********
+
+
+
+
+let val1 = undefined;
+let val2 = undefined;
+function addNum(num1,num2) {
+  let total=  um1+num2;
+  return total
+}
+let result1 = addNum(val1,val2);
+let result2 = addNum(10,2)
+
+
+Types of Execution Contexts in JavaScript
+Global Execution Context (GEC)
+
+Created by default when JavaScript starts executing.
+
+Handles global code (outside of functions).
+
+Function Execution Context (FEC)
+
+Created whenever a function is called.
+
+Has its own memory and execution phases.
+
+Eval Execution Context
+
+Created when eval() function is used (rarely recommended).
+
+Execution Context Lifecycle: Two Phases
+Memory Creation Phase (also called Creation Phase)
+
+Memory is allocated for variables and functions.
+
+Variables are assigned undefined.
+
+Function declarations are stored completely (hoisted).
+
+Execution Phase
+
+Code is executed line-by-line.
+
+Variables are assigned actual values.
+
+Functions are invoked and new execution contexts may be created.
+
+Step-by-Step Execution Example
+1. Global Execution Context Created
+In the memory creation phase:
+
+js
+Copy
+Edit
+var val1 = undefined;
+var val2 = undefined;
+var addNum = function;
+var result1 = undefined;
+var result2 = undefined;
+2. Execution Phase in Global Context
+js
+Copy
+Edit
+val1 = 10;
+val2 = 5;
+3. Function Call: addNum(val1, val2)
+New Function Execution Context is Created
+
+Memory Creation Phase
+
+js
+Copy
+Edit
+num1 = undefined;
+num2 = undefined;
+total = undefined;
+Execution Phase
+
+js
+Copy
+Edit
+num1 = 10;
+num2 = 5;
+total = 15;
+After execution, the function’s execution context is deleted from memory.
+
+Call Stack
+JavaScript uses a call stack to manage execution contexts.
+
+The stack works in LIFO (Last-In-First-Out) order.
+
+When a function is called, its execution context is pushed to the stack.
+
+When the function finishes, the context is popped from the stack.
+
